@@ -1,0 +1,262 @@
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr 2fr 2fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas: 
+      "header header header header"
+      ". intro intro ."
+      ". experience experience  experience "
+      ". projects projects projects";
+    background-color: #f3d849;  
+  }
+  
+
+
+.header {
+    grid-area: header;
+    text-align: center;
+    background-color: #191718;
+    color: #fff;
+    margin-bottom: 3em;
+    padding-bottom: 5em;
+    display: grid;
+    grid-template-rows: 20px 20px 40px;
+}
+.intro {
+    display: flex;
+    flex-direction: column;
+border: rgb(0, 0, 0);
+border-style: groove;
+padding: 10px;
+display:inline-flex;
+background-color: #e0e5e9;
+grid-area: intro;
+margin-top: 28px;
+color: rgb(0, 0, 0);
+}
+
+.intro > #buttons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* flex-direction: row; */
+}
+.experience {
+    grid-area: experience;
+    /* display: flex; */
+    display:grid;
+    /* grid-template-columns: 40% 20% 40%; */
+    grid-template-columns: 10% 10% 10% 10% 10% 10% 10% 10% 10% 10% ;
+    grid-template-rows: 10% 22.5% 22.5% 22.5% 22.5;
+    /* justify-content: space-between;
+    flex-direction: column;
+*/
+}
+/* .experience > .card1 {
+    display:grid;
+    grid-template-rows: 10% 5% 5% 5% 75% ;
+    grid-column-start: 2;
+    grid-row-start: 2;
+    margin: 10px;
+    padding: 10px;
+    width: 400px; 
+    height: 300px; 
+    border: 1px solid black; 
+    overflow: hidden; 
+
+} */
+.experience > .card2 {
+    /* border: solid black 4px; */
+    background-color: #d67940; /* light green background */
+    border-radius: 10px;
+    display:grid;
+    grid-template-rows: 10% 5% 5% 5% 75% ;
+    /* max-width:inherit; */
+    grid-column: 6/10;
+    grid-row: 3/4;
+    margin: 10px;
+    padding: 10px;
+    max-width: 100%; /* Set the width of the div */
+    max-height: 100%; /* Set the height of the div */
+    border: 1px solid black; /* Add a border for visibility */
+    overflow: hidden; /* Hide overflowing content */
+
+}
+ /* .text {
+    font-size: 17px; 
+    overflow: hidden; 
+    white-space: wrap; 
+    grid-row-start: 5;
+    margin-top: 20;
+    padding-top: 10px;
+    text-overflow: ellipsis; 
+  }  */
+.projects {
+    grid-area: skills;
+}
+.tag {
+    margin: 20px;
+    align-self: center;
+    justify-self: center;
+    grid-column: 5/6;
+    grid-row: 1;
+    font-family: Copperplate;
+    font-size: x-large;
+    
+}
+.tag2 {
+    margin: 20px;
+    align-self: center;
+    justify-self: center;
+    grid-column: 5/6;
+    grid-row: 1;
+    font-family: Copperplate;
+    font-size: x-large;
+    
+}
+ /* .position {
+    
+    align-self: center;
+    justify-self: center;
+   
+    grid-row: 1;
+    font-family: Copperplate;
+    font-size: large;
+}  */
+
+/* .employer {
+    grid-row-start: 2;
+} */
+/* .dates{
+    grid-row-start: 3;
+}  */
+#idLinkedInIcon{background-color:rgb(0, 102, 170);border-radius:50%;color:white;cursor:pointer;display:inline-block;font:bold 35px Arial, Helvetica, sans-serif;height:40px;margin-top:1px;text-align:center;width:40px;}
+#idLinkedInIcon:hover{background-color:#06d;}
+
+
+
+.experience >.card1 {
+        background-color: #0a62d0; /* light green background */
+        border-radius: 10px;
+        border: 1px solid #e0e5e9; /* green border */
+        padding: 10px;
+        /* margin: 10px; */
+        margin-bottom: 20px; /* adds some space between cards */
+        max-width: 100%; /* optional: adjust as needed */
+        display:grid;
+        grid-template-rows: 10% 5% 5% 5% 75% ;
+        grid-column: 1/5;
+        grid-row: 2/3;
+        overflow: hidden;
+        max-width: 100%;
+    }
+    .experience >.card3 {
+        background-color: #0a62d0; /* light green background */
+        border-radius: 10px;
+        border: 1px solid #e0e5e9; /* green border */
+        padding: 10px;
+        /* margin: 10px; */
+        margin-bottom: 20px; /* adds some space between cards */
+        max-width: 100%; /* optional: adjust as needed */
+        display:grid;
+        grid-template-rows: 10% 5% 5% 5% 75% ;
+        grid-column: 1/5;
+        grid-row: 4/5;
+        overflow: hidden;
+        max-width: 100%;
+    }
+
+    .position {
+        align-self: center;
+        justify-self: center;
+       
+        grid-row: 1;
+        font-family: Copperplate;
+        font-size: large;
+        font-weight: bold;
+        margin-bottom: 5px; /* adds some space between position and other text */
+    }
+
+    .employer {
+        color: rgb(0, 0, 0); /* dark gray text color */
+        grid-row-start: 2;
+        margin-bottom: 5px; /* adds some space between employer and dates */
+    }
+
+    .dates {
+        color: rgb(0, 0, 0); /* lighter gray text color */
+        margin-bottom: 10px; /* adds some space between dates and list */
+        grid-row-start: 3;
+    }
+
+    .text {
+        /* padding-left: 0;  */
+        font-size: 17px; 
+    overflow: hidden; 
+    white-space: wrap; 
+    grid-row-start: 5;
+    margin-top: 20;
+    padding-top: 10px;
+    text-overflow: ellipsis; 
+    }
+
+    .text li {
+        margin-bottom: 5px; 
+    }
+    .profile-pic {
+        width: 150px; /* Adjust the width as needed */
+        height: 180px; /* Adjust the height as needed */
+        border-radius: 50%; /* Makes the image circular */
+        border: 3px solid #fff; /* White border around the image */
+        overflow: hidden; /* Hides parts of the image outside the circle */
+        grid-row: 3;
+        justify-self: center;
+        margin-top: 15px;
+    }
+
+    .profile-pic img {
+        width: 100%; /* Makes the image cover the entire circle */
+        height: 100%; /* Makes the image cover the entire circle */
+        object-fit: cover; /* Ensures the image maintains its aspect ratio */
+    }
+    #name {
+        grid-row: 1;
+    }
+    #field {
+        grid-row: 2;
+    }
+    .projects {
+        grid-area: projects;
+        display: grid;
+        grid-template-columns: 10% 10% 10% 10% 10% 10% 10% 10% 10% 10% ;
+        grid-template-rows: 10% 22.5% 22.5% 22.5% 22.5;
+
+    }
+    #p1 {
+        display: grid;
+        grid-column: 1/6;
+        grid-row-start: 2;
+        overflow: hidden;
+        max-height: 100%;
+        min-width: 100%;
+        
+    }
+    #pcparts {
+      
+        max-height: 100%;
+        min-width: 100%;
+      
+    }
+    #p2 {
+        display: grid;
+        grid-column: 7/11;
+        grid-row-start: 2;
+        overflow: hidden;
+        max-height: 100%;
+        min-width: 100%;
+        
+    }
+    .pname {
+        justify-self: center;
+    }
